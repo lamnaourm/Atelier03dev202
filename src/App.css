@@ -1,5 +1,4 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
 }
@@ -10,7 +9,7 @@
 
 .bibliotheque {
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   grid-gap: 10px;
   margin: auto;
   width: 800px;
@@ -30,7 +29,7 @@
 
 .livre h1 {
   font-size: 13px;
-  height: 40px;
+  height: 55px;
 }
 
 .livre h2 {
@@ -44,6 +43,7 @@
   border: none;
   padding: 5px;
   cursor: pointer;
+  margin-top: 5px;
 }
 
 .livre button:hover {
@@ -56,5 +56,25 @@
   position: sticky;
   top: 0;
   padding: 10px;
+}
 
+@media only screen and (max-width:750px) {
+  .bibliotheque {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media only screen and (max-width:550px) {
+  .bibliotheque {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (max-width:400px) {
+  .bibliotheque {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
